@@ -37,36 +37,36 @@ class PipelineBuilder implements Serializable
     
     def checkoutSource()
     {
-    	echo "Checking out source"
+    	println "Checking out source"
 	}
 	
 	def buildWar()
 	{
-    	echo "Build War"
+    	println "Build War"
 	}
 	
 	def runUnitTests()
 	{
-    	echo "Run Unit Tests"
+    	println "Run Unit Tests"
 	}
     
     def codeAnalysis()
     {
-    	echo "Code Analysis"
+    	println "Code Analysis"
 	}
 	
 	def pushWarToArtifactRepo()
 	{
-    	echo "Push WAR to Artifact Repository"
+    	println "Push WAR to Artifact Repository"
 	}
 	
 	def buildContainerImage()
 	{
-    	echo "Build Container Image"
+    	println "Build Container Image"
 	}
 	
 	def deployContainerImage()
 	{
-    	echo "Deploy Container Image"
+    	println "Deploy Container Image"
 	}
 }
