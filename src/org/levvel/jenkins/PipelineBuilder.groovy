@@ -11,13 +11,11 @@ class PipelineBuilder implements Serializable
     {
         this.script = null
         this.env = null
-        this.docker = null
-        this.image = null
     }
 
     def envDebug()
     {
-        script.echo "BuildDockerImage >> envDebug() >> Debugging message"
+        script.echo "PipelineBuilder >> envDebug() >> Debugging message"
     }
 
     def setDockerGlobalVar(docker)
