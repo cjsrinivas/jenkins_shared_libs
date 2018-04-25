@@ -2,7 +2,7 @@ import org.levvel.jenkins.PipelineBuilder
 
 class BuildManager implements Serializable
 {
-	def buildAndTestWar(script, args)
+	def buildAndTestWar(script, args = null)
 	{
     	def pipelineBldr = new PipelineBuilder(script)
         pipelineBldr.checkoutSource()
