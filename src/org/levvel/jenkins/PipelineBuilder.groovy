@@ -2,14 +2,13 @@ package org.levvel.jenkins;
 
 class PipelineBuilder implements Serializable
 {
-    //def script
-  	Script script;
-  	
-    //PipelineBuilder()
-    //{
-        //this.script = script
-        //envDebug()
-    //}
+    def script
+  
+    PipelineBuilder(script)
+    {
+        this.script = script
+        envDebug()
+    }
 
     def envDebug()
     {
