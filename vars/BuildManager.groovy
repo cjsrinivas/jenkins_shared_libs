@@ -25,10 +25,10 @@ class BuildManager implements Serializable
     }
 
     //def buildAndDeployContainer(script, args = null)
-    def buildAndDeployContainer()
+    def buildAndDeployContainer(script)
     {
         def pipelineBldr = new PipelineBuilder()
-        echo "Hello World"
+        script.echo "Hello World"
         //pipelineBldr.envDebug()
         //pipelineBldr.buildContainerImage()
         //pipelineBldr.deployContainerImage()
