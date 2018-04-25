@@ -11,13 +11,13 @@ class BuildManager implements Serializable
         pipelineBldr.codeAnalysis()
 	}
 	
-    def pushWarToRepo(script, args)
+    def pushWarToRepo(script, args = null)
     {
         def pipelineBldr = new PipelineBuilder(script)
         pipelineBldr.pushWarToArtifactRepo()
     }
 
-    def buildAndDeployContainer(script, args)
+    def buildAndDeployContainer(script, args = null)
     {
         def pipelineBldr = new PipelineBuilder(script)
         pipelineBldr.buildContainerImage()
