@@ -48,4 +48,9 @@ class PipelineBuilder implements Serializable
 	{
     	script.echo "Deploy Container Image"
 	}
+	
+	def deployWarToAppServer()
+	{
+    	script.echo "Deploy WAR to Application Server"
+	}
 }
