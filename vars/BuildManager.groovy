@@ -24,10 +24,12 @@ class BuildManager implements Serializable
         pipelineBldr.pushWarToArtifactRepo()
     }
 
-    def buildAndDeployContainer(script, args = null)
+    //def buildAndDeployContainer(script, args = null)
+    def buildAndDeployContainer()
     {
-        def pipelineBldr = new PipelineBuilder(script)
-        pipelineBldr.buildContainerImage()
-        pipelineBldr.deployContainerImage()
+        def pipelineBldr = new PipelineBuilder(script:this)
+        pipelineBldr.envDebug()
+        //pipelineBldr.buildContainerImage()
+        //pipelineBldr.deployContainerImage()
     }
 }
