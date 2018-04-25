@@ -4,7 +4,7 @@ class PipelineBuilder implements Serializable
 {
     //def script
   	//def script;
-    PipelineBuilder(script)
+    PipelineBuilder()
     {
     }
 
