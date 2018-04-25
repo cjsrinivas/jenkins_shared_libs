@@ -29,4 +29,10 @@ class BuildManager implements Serializable
         pipelineBldr.buildContainerImage()
         pipelineBldr.deployContainerImage()
     }
+    
+    def deployWarToAppServer(script, args = null)
+    {
+        def pipelineBldr = new PipelineBuilder(script)
+        pipelineBldr.deployWarToAppServer()
+    }
 }
