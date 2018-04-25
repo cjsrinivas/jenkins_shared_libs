@@ -7,11 +7,12 @@ class PipelineBuilder implements Serializable
     PipelineBuilder(script)
     {
         this.script = script
+        envDebug()
     }
 
     def envDebug()
     {
-        script.echo "PipelineBuilder >> envDebug() >> Debugging message"
+        script.println("PipelineBuilder >> envDebug() >> Debugging message")
     }
 
     def checkoutSource()
