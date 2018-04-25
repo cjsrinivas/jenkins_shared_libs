@@ -4,15 +4,15 @@ class PipelineBuilder implements Serializable
 {
     //def script
   	Script script;
-    /*PipelineBuilder(script)
+    PipelineBuilder(script)
     {
         this.script = script
         envDebug()
-    }*/
+    }
 
     def envDebug()
     {
-        script.echo("PipelineBuilder >> envDebug() >> Debugging message")
+        script.echo "PipelineBuilder >> envDebug() >> Debugging message"
     }
 
     def checkoutSource()
