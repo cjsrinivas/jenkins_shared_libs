@@ -3,14 +3,11 @@ package org.levvel.jenkins;
 class PipelineBuilder implements Serializable
 {
     def script
-    def env
-    def docker
-    def image
   
-    PipelineBuilder()
+    PipelineBuilder(script)
     {
-        this.script = null
-        this.env = null
+        this.script = script
+        this.envDebug()
     }
 
     def envDebug()
@@ -18,21 +15,6 @@ class PipelineBuilder implements Serializable
         script.echo "PipelineBuilder >> envDebug() >> Debugging message"
     }
 
-    def setDockerGlobalVar(docker)
-    {
-        this.docker = docker    
-    }
-    
-    def setPipelineScriptObject(script)
-    {
-        this.script = script
-    }
-    
-    def setPipelineEnvObject(env)
-    {
-        this.env = env
-    }
-    
     def checkoutSource()
     {
     	println "Checking out source"
