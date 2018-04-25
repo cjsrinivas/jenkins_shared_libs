@@ -2,6 +2,13 @@ import org.levvel.jenkins.PipelineBuilder
 
 class BuildManager implements Serializable
 {
+	def call()
+	{
+	    // Any valid steps can be called from this code, just like in other
+	    // Scripted Pipeline
+	    echo "Hello World"
+	}
+	
 	def buildAndTestWar(script, args = null)
 	{
     	def pipelineBldr = new PipelineBuilder(script)
