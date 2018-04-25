@@ -6,7 +6,6 @@ class BuildManager implements Serializable
 	{
 	    // Any valid steps can be called from this code, just like in other
 	    // Scripted Pipeline
-	    echo "Hello World"
 	}
 	
 	def buildAndTestWar(script, args = null)
@@ -24,14 +23,10 @@ class BuildManager implements Serializable
         pipelineBldr.pushWarToArtifactRepo()
     }
 
-    //def buildAndDeployContainer(script, args = null)
-    def buildAndDeployContainer(script)
+    def buildAndDeployContainer(script, args = null)
     {
         def pipelineBldr = new PipelineBuilder(script)
-        script.echo "Hello World"
-        pipelineBldr.envDebug()
-        //pipelineBldr.envDebug()
-        //pipelineBldr.buildContainerImage()
-        //pipelineBldr.deployContainerImage()
+        pipelineBldr.buildContainerImage()
+        pipelineBldr.deployContainerImage()
     }
 }

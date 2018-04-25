@@ -2,8 +2,6 @@ package org.levvel.jenkins;
 
 class PipelineBuilder implements Serializable
 {
-    //def script
-  	//def script;
   	def script = null;
   	
     PipelineBuilder(script)
@@ -18,36 +16,36 @@ class PipelineBuilder implements Serializable
 
     def checkoutSource()
     {
-    	println "Checking out source"
+    	script.echo "Checking out source"
 	}
 	
 	def buildWar()
 	{
-    	println "Build War"
+    	script.echo "Build War"
 	}
 	
 	def runUnitTests()
 	{
-    	println "Run Unit Tests"
+    	script.echo "Run Unit Tests"
 	}
     
     def codeAnalysis()
     {
-    	println "Code Analysis"
+    	script.echo "Code Analysis"
 	}
 	
 	def pushWarToArtifactRepo()
 	{
-    	println "Push WAR to Artifact Repository"
+    	script.echo "Push WAR to Artifact Repository"
 	}
 	
 	def buildContainerImage()
 	{
-    	println "Build Container Image"
+    	script.echo "Build Container Image"
 	}
 	
 	def deployContainerImage()
 	{
-    	println "Deploy Container Image"
+    	script.echo "Deploy Container Image"
 	}
 }
