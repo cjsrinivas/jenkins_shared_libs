@@ -4,11 +4,14 @@ class PipelineBuilder implements Serializable
 {
     //def script
   	//def script;
-    PipelineBuilder()
+  	script = null;
+  	
+    PipelineBuilder(script)
     {
+    	this.script = script
     }
 
-    def envDebug(script)
+    def envDebug()
     {
         script.echo "PipelineBuilder >> envDebug() >> Debugging message"
     }
